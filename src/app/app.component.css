@@ -1,0 +1,35 @@
+hr {
+    border: 0;
+    display:block;
+    background-color:rgb(65, 20, 21);
+    height: 2px;
+}
+
+.btn.btn-fb { 
+    color:white;
+    background-color: rgb( 59, 89, 152)
+}   
+
+.btn.btn-tw {
+    color:white;
+    background-color: rgb(0, 172, 237);
+}
+
+.btn.btn-ins {
+    color:white;    
+    background-color: rgb(138, 58, 185);
+}
+
+.btn.btn-git {
+    color:white;    
+    background-color: rgb(0, 0, 0);
+}
+
+.btn.btn-email {
+    color:white;    
+    background-color: darkgrey;
+}
+
+a {
+    color:white;
+}
