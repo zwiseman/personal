@@ -1,0 +1,7 @@
+hr {
+    border: 0;
+    display:block;
+    background-color:rgb(3, 3, 3);
+    height: 2px;
+    width:50%;
+}
