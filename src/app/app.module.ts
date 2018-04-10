@@ -10,11 +10,15 @@ import { WeatherService } from './services/weather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
+import { LeadersComponent } from './leaders/leaders.component';
+import { BaseballComponent } from './baseball/baseball.component';
+import { MlbService } from './services/mlb.service';
 
 const routes: Routes = [
   {path: '', redirectTo: '/info', pathMatch: 'full'},
   {path: 'info', component: InfoComponent},
-  {path: 'weather', component: WeatherComponent}
+  {path: 'weather', component: WeatherComponent},
+  {path: 'baseball', component: BaseballComponent}
 ];
 
 @NgModule({
@@ -22,7 +26,9 @@ const routes: Routes = [
     AppComponent,
     InfoComponent,
     NavbarComponent,
-    WeatherComponent
+    WeatherComponent,
+    LeadersComponent,
+    BaseballComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,7 @@ const routes: Routes = [
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot()
   ],
-  providers: [ WeatherService ],
+  providers: [ WeatherService, MlbService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

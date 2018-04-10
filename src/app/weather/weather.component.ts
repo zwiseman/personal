@@ -23,7 +23,6 @@ export class WeatherComponent implements OnInit, OnDestroy {
     this.subscription = this._weatherService.getWeather().subscribe(data => {
       this.data = data['current_observation'];
       this.location = this.data['display_location'];
-      console.log(this.data);
     });
   }
 
