@@ -9,12 +9,13 @@ import { WeatherComponent } from './weather/weather.component';
 import { WeatherService } from './services/weather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
 
 const routes: Routes = [
   {path: '', redirectTo: '/info', pathMatch: 'full'},
   {path: 'info', component: InfoComponent},
   {path: 'weather', component: WeatherComponent}
-]
+];
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ const routes: Routes = [
     BrowserModule,
     AngularFontAwesomeModule,
     HttpClientModule,
-    RouterModule.forRoot(routes, {useHash: true})
+    RouterModule.forRoot(routes, {useHash: true}),
+    CollapseModule.forRoot(),
+    BsDropdownModule.forRoot()
   ],
   providers: [ WeatherService ],
   bootstrap: [AppComponent]
