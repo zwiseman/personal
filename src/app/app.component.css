@@ -5,6 +5,11 @@ hr {
     height: 2px;
 }
 
+h1 {
+    padding-top: 2%;
+    padding-left: 10%;
+}
+
 btn.btn-square {
     border-radius: 0;
 }
@@ -12,3 +17,6 @@ btn.btn-square {
 a {
     color:white;
 }
+ .pad {
+     padding-top: 3%;
+ }

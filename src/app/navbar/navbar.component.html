@@ -1,14 +1,14 @@
-<nav class="navbar navbar-inverse navbar-expand-md navbar-light" style="font-size:20px;">
+<nav class="navbar navbar-default navbar-expand-md  navbar-right navbar-light" style="font-size:20px;">
   <button class="navbar-toggler"  (click)="isCollapsed = !isCollapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" [collapse]=isCollapsed>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item active ">
-        <a class="nav-link" routerLink=''>Home</a>
+  <div class="collapse navbar-collapse navbar-inner" [collapse]=isCollapsed>
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" style="color: #C2564C;" routerLink=''>Home</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/weather">Weather</a>
+        <a class="nav-link vl" style="color: #C2564C;" routerLink="/weather">Weather</a>
       </li>
     </ul>
   </div>
