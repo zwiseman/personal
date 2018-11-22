@@ -15,4 +15,6 @@ import { WeatherComponent } from './weather.component';
   ],
   providers: [WeatherComponent]
 })
-export class MyModule {}
+export class MyModule {
+
+}

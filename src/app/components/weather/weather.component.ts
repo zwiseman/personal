@@ -1,10 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
-import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
-import { WeatherService } from '../services/weather.service';
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import { WeatherService } from 'services/index';
 
 @Component({
   selector: 'app-weather',
@@ -13,7 +10,7 @@ import { of } from 'rxjs/observable/of';
 })
 
 export class WeatherComponent implements OnInit, OnDestroy {
-  data: any[];
+  weatherInformation: any[];
   location: any[];
   subscription: Subscription;
   radar: any = true;
@@ -21,8 +18,9 @@ export class WeatherComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscription = this._weatherService.getWeather().subscribe(data => {
-      this.data = data['current_observation'];
-      this.location = this.data['display_location'];
+      this.weatherInformation = data['current_observation'];
+      this.location = this.weatherInformation['display_location'];
+      console.log(this.weatherInformation);
     });
   }
 

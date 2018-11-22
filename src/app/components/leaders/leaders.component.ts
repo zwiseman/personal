@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
-import { MlbService } from '../services/mlb.service';
+import { MlbService } from '../../services/mlb.service';
 
 @Component({
   selector: 'app-leaders',
