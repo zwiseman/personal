@@ -1,13 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
 import { Components } from 'components/index';
 import { Services } from 'services/index';
-import { Routes } from './app.routing';
-
 
 @NgModule({
   declarations: [
@@ -16,13 +14,10 @@ import { Routes } from './app.routing';
   ],
   imports: [
     BrowserModule,
-    AngularFontAwesomeModule,
-    HttpClientModule,
-    Routes,
-    CollapseModule.forRoot(),
-    BsDropdownModule.forRoot()
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [ Services ],
+  providers: [ Services],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

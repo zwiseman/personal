@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Response } from '@angular/http';
+import { Observable, of } from 'rxjs';
 
 @Injectable()
 export class WeatherService {
@@ -10,7 +8,7 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getWeather(): Observable<any> {
+  getWeather(): Observable <any> {
     return this.http.get<any>(this.url);
   }
 }

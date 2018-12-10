@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
-import 'rxjs/add/operator/map';
 import { WeatherService } from 'services/index';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-weather',
