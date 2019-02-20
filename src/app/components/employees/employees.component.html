@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-12 text-right">
+    <button type="button" (click)="create()" class="float-center btn btn-add mt-1 ml-1"><i class="fa fa-plus" style="color:rgb(0, 172, 237)"></i></button>
+  </div>
+</div>
+
+<div>
+  <table class="table table-dark table-striped table-hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Job</th>
+        <th>Equipment</th>
+        <th>Address</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td (click)="details(employee)">{{employee.Id}}</td>
+        <td (click)="details(employee)">{{employee.FirstName}}</td>
+        <td (click)="details(employee)">{{employee.LastName}}</td>
+        <td (click)="details(employee)">{{employee.Job}}</td>
+        <td (click)="details(employee)">{{employee.Equipment}}</td>
+        <td (click)="details(employee)">{{employee.Address}}</td>
+        <td>
+          <button type="button" (click)="delete(employee)" class="float-center btn btn-no-background mt-1 ml-1"><i class="fa fa-minus"
+              style="color:rgb(0, 172, 237)"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

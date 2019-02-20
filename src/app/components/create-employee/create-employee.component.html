@@ -1,0 +1,36 @@
+<div>
+    <h1 mat-dialog-title>Add Employee</h1>
+    <div mat-dialog-content>
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input *ngIf="disabled" disabled matInput [(ngModel)]="employee.FirstName">
+        <input *ngIf="!disabled" matInput [(ngModel)]="employee.FirstName">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput *ngIf="disabled" disabled [(ngModel)]="employee.LastName">
+        <input matInput *ngIf="!disabled" [(ngModel)]="employee.LastName">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Job</mat-label>
+        <input matInput *ngIf="disabled" disabled [(ngModel)]="employee.Job">
+        <input matInput *ngIf="!disabled" [(ngModel)]="employee.Job">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Equipment</mat-label>
+        <input matInput *ngIf="disabled" disabled [(ngModel)]="employee.Equipment">
+        <input matInput *ngIf="!disabled" [(ngModel)]="employee.Equipment">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput *ngIf="disabled" disabled [(ngModel)]="employee.Address">
+        <input matInput *ngIf="!disabled" [(ngModel)]="employee.Address">
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button *ngIf="disabled" disabled (click)="close()">close</button>
+      <button mat-button *ngIf="!disabled" (click)="close()">close</button>
+      <button mat-button *ngIf="disabled" disabled cdkFocusInitial (click)="create()">Save</button>
+      <button mat-button *ngIf="!disabled" cdkFocusInitial (click)="create()">Save</button>
+    </div>
+  </div>

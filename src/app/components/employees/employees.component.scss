@@ -1,0 +1,21 @@
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: rgb(163, 113, 19);
+}
+
+th:hover {
+    &:after {
+        content:'\f0dc';
+        font-family: FontAwesome;
+        font-size: 10px;
+        padding-left: 10px;
+    }
+}
+
+.btn-add {
+  font-size: 25px;
+}
+
+.btn-no-background {
+  background: none;
+}

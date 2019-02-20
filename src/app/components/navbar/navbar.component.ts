@@ -7,7 +7,7 @@ import * as $ from 'jquery';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  isCollapsed = true;
+  isCollapsed = false;
   constructor() { }
 
   ngOnInit() {

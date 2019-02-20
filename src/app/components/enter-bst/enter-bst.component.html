@@ -1,0 +1,11 @@
+<div>
+    <input type="text" [(ngModel)]="bst" (ngModelChange)="changeInput()" class="form-control" placeholder="Enter nodes sperated by a comma(,)">
+</div>
+
+<div>
+    <button class="btn btn-success" (click)="postbst()">Draw Tree</button>
+</div>
+
+<div>
+    <figure class="svg-container"></figure>
+</div>
