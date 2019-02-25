@@ -8,6 +8,7 @@ import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { EnterBstComponent } from './enter-bst/enter-bst.component';
 import { GenericBinarySearchComponent } from './generic-binary-search/generic-binary-search.component';
+import { LeadersComponent } from './leaders/leaders.component';
 
 export * from './weather/weather.component';
 export * from './navbar/navbar.component';
@@ -20,6 +21,7 @@ export * from './edit-employee/edit-employee.component';
 export * from './create-employee/create-employee.component';
 export * from './enter-bst/enter-bst.component';
 export * from './generic-binary-search/generic-binary-search.component';
+export * from './leaders/leaders.component';
 
 export const Components = [
     WeatherComponent,
@@ -31,5 +33,6 @@ export const Components = [
     EditEmployeeComponent,
     CreateEmployeeComponent,
     EnterBstComponent,
+    LeadersComponent,
     GenericBinarySearchComponent
 ];

@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class BinarySearchTreeService {
-  private url = environment.server5000 + '/solid/binarySearchTree';
+  private url = environment.serverbst + '/solid/binarySearchTree';
 
   constructor(private http: HttpClient) { }
 

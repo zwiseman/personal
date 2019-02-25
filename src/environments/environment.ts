@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  server5000: 'http://localhost:5000',
-  server5001: 'http://localhost:5001'
+  serverbst: 'http://localhost:5000',
+  serveremp: 'http://localhost:5001'
 };
 
 /*
