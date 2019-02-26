@@ -65,7 +65,7 @@ export class DrawTree {
             .attr('class', 'link');
 
         links
-            .style('stroke', 'black')
+            .style('stroke', '#14A098')
             .style('stroke-width', '5px')
             .style('fill', 'none');
 
@@ -82,13 +82,14 @@ export class DrawTree {
 
         node.append('circle')
             .attr('r', 16)
-            .style('stroke', 'blue')
+            .style('stroke', '#cccccc')
             .style('stroke-width', '3px')
-            .style('fill', '#fff');
+            .style('fill', '#cb2d6f');
 
         node.append('text')
             .attr('dy', '.35em')
             .style('text-anchor', 'middle')
+            .style('fill', '#cccccc')
             .text(function (d) { return d.data.id; });
     }
 }

@@ -1,25 +1,39 @@
 <div class="container-fluid mt-1">
   <h3 *ngIf="location" class="text-center">The {{location['city']}}, {{location['state']}} current weather</h3>
   <hr>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <mat-form-field>
+        <mat-select placeholder="City" [(ngModel)]="city" (ngModelChange)="printCity()">
+          <mat-option *ngFor="let city of cities" [value]="city">{{city.city}}, {{city.state}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-button color="primary" (click)="searchWeather()">Search Weather</button>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
   <div *ngIf="weatherInformation" class="col-md-12">
     <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-3">
-        <p> Temperature: {{weatherInformation['temperature_string']}}</p>
-        <p> Feels Like: {{weatherInformation['feelslike_string']}}</p>
-        <p> Wind Chill: {{weatherInformation['windchill_string']}}</p>
+      <div class="col-sm-6">
+        <!-- <img *ngIf="!searching" class="img-fluid" [src]="image"> -->
+        <img *ngIf="searching" class="img-fluid" src="http://api.wunderground.com/api/83e8c2eba2c4b5d3/animatedradar/animatedsatellite/q/{{location['state']}}/{{location['city']}}.gif?num=10&delay=50&interval=50&rad.rainsnow=1&rad.height=700&rad.width=700&sat.height=700&sat.width=700&sat.smooth=1&sat.basemap=1&rad.smooth=1&rad.radius=500&sat.radius=500">
+        <p *ngIf="searching">Loading Map...</p> 
       </div>
-      <div class="col-md-3">
-          <p> Wind direction: {{weatherInformation['wind_dir']}}</p>
-          <p> Wind gust: {{weatherInformation['wind_gust_mph']}} mph</p>
-          <p> Local time: {{weatherInformation['local_time_rfc822']}}</p>
+      <!-- http://api.wunderground.com/api/83e8c2eba2c4b5d3/animatedradar/animatedsatellite/q/{{location['state']}}/{{location['city']}}.gif?num=10&delay=50&interval=50&rad.rainsnow=1&rad.height=700&rad.width=700&sat.height=700&sat.width=700&sat.smooth=1&sat.basemap=1&rad.smooth=1&rad.radius=500&sat.radius=500 -->
+      <div class="col-sm-3">
+        <p> <u>Temperature</u> <br>{{weatherInformation['temperature_string']}}</p>
+        <p> <u>Feels Like</u> <br>{{weatherInformation['feelslike_string']}}</p>
+        <p> <u>Wind Chill</u> <br>{{weatherInformation['windchill_string']}}</p>
+      </div>
+      <div class="col-sm-3">
+        <p> <u>Wind direction</u> <br>{{weatherInformation['wind_dir']}}</p>
+        <p> <u>Wind gust</u> <br>{{weatherInformation['wind_gust_mph']}} mph</p>
+        <p> <u>Local time</u> <br>{{weatherInformation['local_time_rfc822']}}</p>
       </div>
     </div>
   </div>
   <div class="row text-center">
     <div class="col-md-3"></div>
-    <div class="col-md-6">
-      <img *ngIf="location" class="img-fluid" src="http://api.wunderground.com/api/83e8c2eba2c4b5d3/animatedradar/animatedsatellite/q/{{location['state']}}/{{location['city']}}.gif?num=10&delay=50&interval=50&rad.rainsnow=1&rad.height=700&rad.width=700&sat.height=700&sat.width=700&sat.smooth=1&sat.basemap=1&rad.smooth=1&rad.radius=500&sat.radius=500">
-    </div>
   </div>
 </div>

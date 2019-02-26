@@ -10,16 +10,19 @@ import {
   MatButtonModule,
   MatInputModule,
   MatFormFieldModule,
-  MatDialogModule } from '@angular/material';
+  MatDialogModule,
+  MatSelectModule} from '@angular/material';
 import { Components,
   EditEmployeeComponent,
   CreateEmployeeComponent } from 'components/index';
 import { Services } from 'services/index';
+import { Pipes } from 'pipes/index';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Components
+    Components,
+    Pipes
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { Services } from 'services/index';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [ Services,
     {provide: MAT_LABEL_GLOBAL_OPTIONS, useValue: {float: 'always'}}],
