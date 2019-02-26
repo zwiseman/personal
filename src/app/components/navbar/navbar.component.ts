@@ -7,10 +7,15 @@ import * as $ from 'jquery';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  isCollapsed = false;
+  isCollapsed = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  setHeight() {
+    this.isCollapsed = !this.isCollapsed;
   }
 
 }

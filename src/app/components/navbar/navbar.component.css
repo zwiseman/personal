@@ -7,11 +7,15 @@
     float: none;
 }
 
-navbar {
-    padding-top: 3%;
-}
-
 .vl {
     border-left: 1px solid #292114;
     height: 29px;
+}
+
+.bottomBorder {
+    border-bottom: 1px solid white;
+}
+
+.bottomBorder:hover {
+    background-color: darkgray;
 }

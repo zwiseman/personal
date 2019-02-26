@@ -5,31 +5,33 @@
 </div>
 
 <div *ngIf="employees">
-  <table class="table table-dark table-striped table-hover">
-    <thead>
-      <tr>
-        <th></th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Job</th>
-        <th>Equipment</th>
-        <th>Address</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let employee of employees">
-        <td (click)="details(employee)">{{employee.id}}</td>
-        <td (click)="details(employee)">{{employee.firstName}}</td>
-        <td (click)="details(employee)">{{employee.lastName}}</td>
-        <td (click)="details(employee)">{{employee.job}}</td>
-        <td (click)="details(employee)">{{employee.equipment}}</td>
-        <td (click)="details(employee)">{{employee.address}}</td>
-        <td>
-          <button type="button" (click)="delete(employee)" class="float-center btn btn-no-background mt-1 ml-1"><i class="fa fa-minus"
-              style="color:rgb(0, 172, 237)"></i></button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive-md">
+    <table class="table table-dark table-striped table-hover">
+      <thead>
+        <tr>
+          <th></th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Job</th>
+          <th>Equipment</th>
+          <th>Address</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td (click)="details(employee)">{{employee.id}}</td>
+          <td (click)="details(employee)">{{employee.firstName}}</td>
+          <td (click)="details(employee)">{{employee.lastName}}</td>
+          <td (click)="details(employee)">{{employee.job}}</td>
+          <td (click)="details(employee)">{{employee.equipment}}</td>
+          <td (click)="details(employee)">{{employee.address}}</td>
+          <td>
+            <button type="button" (click)="delete(employee)" class="float-center btn btn-no-background mt-1 ml-1"><i class="fa fa-minus"
+                style="color:rgb(0, 172, 237)"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

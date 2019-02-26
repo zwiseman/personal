@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { PostBstService } from 'services/post-bst.service';
 import { DrawTree } from 'app/classes/drawTree';
+import * as d3 from 'd3';
 
 @Component({
   selector: 'app-enter-bst',
@@ -19,7 +20,7 @@ export class EnterBstComponent implements OnInit, OnDestroy {
   ngOnInit() { }
 
   postbst() {
-    console.log(this.bst);
+    d3.selectAll('figure > *').remove();
     if (this.bst) {
       this.bst = JSON.stringify(this.bst);
       this.subscription = this.postService.postBst(this.bst).subscribe(data => {

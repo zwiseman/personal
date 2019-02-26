@@ -1,14 +1,28 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6">
-      <h1 class="text-left mt-3 ml-3">
-        <!-- <p style="font-size:50px;color:#292114"> Zack Wiseman</p> -->
-      </h1>
-    </div>
-    <div class="col-md-6 pad">
+    <div *ngIf="getScreenWidth() >= 768" class="col-md-3 pad" style="background-color: lightgrey; height:100vh;">
       <app-navbar></app-navbar>
     </div>
+    <div *ngIf="getScreenWidth() < 768" class="col-md-3 pad">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="col-md-9 pad container-fluid">
+      <router-outlet></router-outlet>
+    </div>
   </div>
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
 </div>
+
+<!-- Line stylings -->
+<!-- <div class="top-left"></div>
+<div class="bottom-left"></div>
+<div class="bottom-left-1"></div>
+<div class="bottom-left-2"></div>
+<div class="bottom-right"></div>
+<div class="mid-top"></div>
+<div class="top-right"></div>
+<div class="center-bottom-hz"></div>
+<div class="center-bottom-md"></div>
+<div class="center-bottom-btlt"></div>
+<div class="center-bottom-btrt"></div>
+<div class="center-bottom-btmd"></div>
+<div class="cross-bronx"></div> -->

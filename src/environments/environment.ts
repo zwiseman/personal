@@ -4,8 +4,10 @@
 
 export const environment = {
   production: false,
-  serverbst: 'http://localhost:5000',
-  serveremp: 'http://localhost:5001'
+  serverbst: 'http://solid-env.7ucdjtxh7e.us-east-2.elasticbeanstalk.com',
+  serveremp: 'http://18.191.83.236'
+  // serverbst: 'http://localhost:5000',
+  // serveremp: 'http://localhost:5001'
 };
 
 /*
