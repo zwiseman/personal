@@ -36,7 +36,7 @@ export class DrawTree {
             return d.children;
         });
 
-        /************ Draw Tree ************/
+        /************ Draw Tree *************/
         const margin = { top: 20, right: 120, bottom: 200, left: 160 },
             width = 960 - margin.right - margin.left,
             height = 500 - margin.top - margin.bottom;
